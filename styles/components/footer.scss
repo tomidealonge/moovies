@@ -1,0 +1,79 @@
+.c-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $white;
+  padding: 8rem 14rem 8rem 16.5rem;
+  @extend %dmsans;
+
+
+  .c-end-note {
+    width: 100%;
+    max-width: 32.3rem;
+
+    &__heading {
+      @extend %body-30;
+      margin-bottom: 0.7rem;
+    }
+
+    &__sub-text {
+      @extend %body-14;
+    }
+  }
+
+  .c-cred {
+    &__heading {
+      @extend %title-80;
+      color: $red;
+      margin-bottom: 3.2rem;
+    }
+
+    .creators {
+      display: flex;
+      @extend %body-16;
+
+      &__creator {
+        &:first-child {
+          margin-right: 11.3rem;
+        }
+      }
+
+      &__social-link {
+        display: inline-block;
+        width: 2.8rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        margin-top: 1.2rem;
+        margin-right: 1rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: filter ease-in-out 0.5s;
+        cursor: pointer;
+
+        &.--inactive {
+          filter: blur(0.4rem);
+        }
+
+        &.--linkedin {
+          background-image: url('@/assets/images/linkedin.svg');
+        }
+
+        &.--behance {
+          background-image: url('@/assets/images/behance.svg');
+        }
+
+        &.--dribble {
+          background-image: url('@/assets/images/dribble.svg');
+        }
+
+        &.--twitter {
+          background-image: url('@/assets/images/twitter.svg');
+        }
+
+        &.--github {
+          background-image: url('@/assets/images/github.svg');
+        }
+      }
+    }
+  }
+}

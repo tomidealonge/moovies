@@ -1,0 +1,96 @@
+.c-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.9rem 7.7rem;
+  padding-bottom: 0;
+  padding-right: 7rem;
+  background-color: transparent;
+  transition: all ease-in-out 500ms;
+  position: absolute;
+  inset: 0;
+  bottom: auto;
+  z-index: 3;
+
+  &__logo {
+    width: 13rem;
+    height: 7.3rem;
+    background-image: url('@/assets/images/logo-white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all ease-in-out 500ms;
+
+    &.--red {
+      background-image: url('@/assets/images/logo-all-white.svg');
+    }
+  }
+
+  .c-switch {
+    position: relative;
+    display: inline-block;
+    width: 2.7rem;
+    height: 1.5rem;
+    margin-left: 9rem;
+
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked+.c-slider {
+        background-color: $black;
+      }
+
+      &:focus+.c-slider {
+        box-shadow: 0 0 1px $red;
+      }
+
+      &:checked+.c-slider {
+
+        &:before {
+          background-color: $red;
+          -webkit-transform: translateX(1.1rem);
+          -ms-transform: translateX(1.1rem);
+          transform: translateX(1.1rem);
+        }
+      }
+    }
+
+    .c-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $red;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 2rem;
+
+      &:before {
+        border-radius: 50%;
+        position: absolute;
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        left: 0.3rem;
+        bottom: 0.3rem;
+        background-color: $black;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+    }
+  }
+
+  .c-nav-links {
+    &__links {
+      @extend %nav;
+      color: $white;
+      margin: 0 3rem;
+    }
+  }
+
+}

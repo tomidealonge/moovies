@@ -1,0 +1,98 @@
+.c-home {
+  .c-header {
+    overflow: hidden;
+    height: 100vh;
+
+    &__inner {
+      height: 100%;
+      background-color: $black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease-out 500ms;
+      z-index: 1;
+
+      &.--red {
+        background-color: $red;
+      }
+
+
+      .c-hero {
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+
+        &__title {
+          @extend %title-header;
+          margin-bottom: 1.6rem;
+        }
+
+        &__subtext {
+          @extend %body-20;
+          max-width: 44.2rem;
+          width: 100%;
+        }
+      }
+
+      .c-movie-stripe {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+
+        &__holder {
+          overflow-x: auto;
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+        }
+
+        &__movie {
+          flex-shrink: 0;
+          background-color: rgba($color: $black, $alpha: 0.6);
+          margin: 0 3.2rem;
+          width: 66.1rem;
+          height: 41.2rem;
+          margin: 1rem 5rem;
+          position: relative;
+        }
+
+        &__movie-preview {
+          width: 100%;
+          height: 100%;
+          background-image: url('https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        &__movie-cover {
+          position: absolute;
+          inset: 0;
+          background-color: rgba($color: $black, $alpha: 0.6);
+        }
+
+      }
+    }
+
+    position: relative;
+
+  }
+
+  .c-main {
+    overflow: hidden;
+    position: relative;
+    padding-top: 13.7rem;
+    padding-bottom: 26.9rem;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(211, 171, 169, 1) 100%);
+  }
+}

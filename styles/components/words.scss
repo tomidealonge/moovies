@@ -1,0 +1,35 @@
+    .c-words {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      @extend %frunchy;
+      font-size: 70.9rem;
+      line-height: 50rem;
+      color: rgba($color: $words, $alpha: 0.6);
+      z-index: 1;
+      opacity: 0.25;
+
+      &.--header {
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: #ffffff;
+        -webkit-text-fill-color: #000000;
+
+      }
+
+      &.--red {
+        -webkit-text-stroke-color: $black;
+        -webkit-text-fill-color: $red;
+      }
+
+      &.--black {
+        -webkit-text-stroke-color: rgba($color: $words, $alpha: 0.6);
+        ;
+        -webkit-text-fill-color: $black;
+      }
+
+      &__word {
+        white-space: nowrap;
+        transition: all ease-out 500ms;
+      }
+    }

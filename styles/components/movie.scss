@@ -1,0 +1,108 @@
+.c-movie {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 109.4rem;
+  margin: 0 auto;
+  margin-bottom: 9.1rem;
+  position: relative;
+  z-index: 2;
+
+  &:nth-child(2n) {
+    .c-movie-preview {
+      order: 2;
+      transform: rotate(2deg);
+      margin-right: 0rem;
+    }
+
+    .c-movie-text-block {
+      order: 1;
+      margin-right: 6.3rem;
+    }
+  }
+
+  .c-movie-preview {
+    margin-right: 6.3rem;
+    width: 100%;
+    max-width: 60.4rem;
+    height: 40.9rem;
+    border-radius: 2.5rem;
+    position: relative;
+    transform: rotate(-2deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__cover {
+      position: absolute;
+      border-radius: 2.5rem;
+      inset: 0;
+      background-color: rgba($color: $black, $alpha: 0.5);
+    }
+
+    .c-movie-preview-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 6.3rem;
+      height: 6.3rem;
+      border-radius: 50%;
+      background-color: rgba($color: $black, $alpha: 0.5);
+      cursor: pointer;
+
+      &__inner {
+        width: 4.1rem;
+        height: 4.1rem;
+        border-radius: 50%;
+        background-image: url('@/assets/images/play-icon.svg');
+        background-color: rgba($color: $black, $alpha: 0.8);
+        background-repeat: no-repeat;
+        background-size: 25%;
+        background-position: center;
+      }
+    }
+
+    .c-movie-tweet-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 6.3rem;
+      height: 6.3rem;
+      border-radius: 50%;
+      background-color: rgba($color: $white, $alpha: 0.5);
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+
+      &__inner {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-image: url('@/assets/images/twitter-icon.svg');
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+      }
+    }
+
+  }
+
+  .c-movie-text-block {
+    width: 100%;
+    max-width: 40.4rem;
+
+    &__title {
+      @extend %title-75;
+      margin-bottom: 1.9rem;
+      color: $red;
+    }
+
+    &__body {
+      @extend %body-18;
+    }
+  }
+}

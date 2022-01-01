@@ -53,3 +53,11 @@ canvas {
 video {
   max-width: 100%;
 }
+
+.c-red-text {
+  color: $red;
+}
+
+.red-underline {
+  border-bottom: 2px solid $red;
+}
