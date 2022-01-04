@@ -67,10 +67,33 @@
   &.--open {
     height: 100%;
     opacity: 1;
+  }
 
-    // .c-cinema__video {
-    //   transition: all ease-in-out 500ms;
-    //   transform: rotate(-2deg) scale(1);
-    // }
+  .c-cinema-tweet-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.3rem;
+    height: 6.3rem;
+    border-radius: 50%;
+    background-color: rgba($color: $white, $alpha: 0.5);
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(11rem, -50%);
+    z-index: 2;
+
+
+    &__inner {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-image: url('@/assets/images/twitter-icon.svg');
+      background-color: $white;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: center;
+    }
   }
 }

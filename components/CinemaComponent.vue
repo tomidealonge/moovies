@@ -2,6 +2,14 @@
   <div class="c-cinema" :class="openCinema ? '--open' : ''">
     <WordsComponent headerColor="black" position="header" :words="words" />
     <div @click="closeCinema" class="c-cinema__close"></div>
+    <ShareNetwork
+      class="c-cinema-tweet-icon"
+      network="twitter"
+      :title="`I just saw this scene of ${title} from moovies, check it out`"
+      url="https://testlink.com"
+    >
+      <div class="c-cinema-tweet-icon__inner"></div>
+    </ShareNetwork>
     <div ref="video" class="c-cinema__video">
       <iframe :src="video"></iframe>
     </div>
@@ -18,6 +26,10 @@ export default {
     video: {
       type: String,
       default: "https://www.youtube.com/embed/QbFQ9bR_IbE"
+    },
+    title: {
+      type: String,
+      default: ""
     }
   },
 

@@ -14,9 +14,16 @@
       <div @click="openCinema" class="c-movie-preview-icon">
         <div class="c-movie-preview-icon__inner"></div>
       </div>
-      <div class="c-movie-tweet-icon">
+      <ShareNetwork
+        class="c-movie-tweet-icon"
+        network="twitter"
+        :title="
+          `I just saw this scene of ${movie.title} from moovies, check it out`
+        "
+        url="https://testlink.com"
+      >
         <div class="c-movie-tweet-icon__inner"></div>
-      </div>
+      </ShareNetwork>
       <div class="c-movie-preview__cover"></div>
     </div>
     <div class="c-movie-text-block">
@@ -46,6 +53,12 @@ export default {
           video: "https://www.youtube.com/watch?v=rDuetklFtDQ"
         };
       }
+    }
+  },
+
+  computed: {
+    siteURL() {
+      return process.env.SITE_URL;
     }
   },
 
