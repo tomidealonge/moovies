@@ -3,7 +3,17 @@
     ref="wordsWrapper"
     class="c-words"
     :class="[`--${position}`, headerColor]"
-  ></div>
+  >
+    <marquee-text
+      :repeat="5"
+      :duration="20"
+      :reverse="index % 2 === 0 ? true : false"
+      v-for="(words, index) in words"
+      :key="index"
+    >
+      {{ words }}
+    </marquee-text>
+  </div>
 </template>
 
 <script>
@@ -21,22 +31,6 @@ export default {
       type: String,
       default: ""
     }
-  },
-
-  methods: {
-    compileWords() {
-      const wordsWrapper = this.$refs.wordsWrapper;
-      this.words.forEach(word => {
-        const div = document.createElement("div");
-        div.className = "c-words__word";
-        div.textContent = word;
-        wordsWrapper.append(div);
-      });
-    }
-  },
-
-  mounted() {
-    this.compileWords();
   }
 };
 </script>
