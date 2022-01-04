@@ -58,32 +58,6 @@
               </div>
             </SplideSlide>
           </Splide>
-          <!-- <div class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide c-movie-stripe__movie --got">
-                  <div class="c-movie-stripe__movie-preview"></div>
-                  <div class="c-movie-stripe__movie-cover"></div>
-                </li>
-                <li class="splide__slide c-movie-stripe__movie --got">
-                  <div class="c-movie-stripe__movie-preview"></div>
-                  <div class="c-movie-stripe__movie-cover"></div>
-                </li>
-                <li class="splide__slide c-movie-stripe__movie --got">
-                  <div class="c-movie-stripe__movie-preview"></div>
-                  <div class="c-movie-stripe__movie-cover"></div>
-                </li>
-                <li class="splide__slide c-movie-stripe__movie --got">
-                  <div class="c-movie-stripe__movie-preview"></div>
-                  <div class="c-movie-stripe__movie-cover"></div>
-                </li>
-                <li class="splide__slide c-movie-stripe__movie --got">
-                  <div class="c-movie-stripe__movie-preview"></div>
-                  <div class="c-movie-stripe__movie-cover"></div>
-                </li>
-              </ul>
-            </div>
-          </div> -->
         </div>
       </div>
     </header>

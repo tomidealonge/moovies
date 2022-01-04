@@ -62,7 +62,18 @@ video {
   border-bottom: 2px solid $red;
 }
 
-
 .c-hide {
   display: none !important;
+}
+
+
+// Page transition
+.transition-page-enter-active,
+.transition-page-leave-active {
+  transition: all 300ms ease-in-out;
+}
+
+.transition-page-enter,
+.transition-page-leave-to {
+  opacity: 0;
 }

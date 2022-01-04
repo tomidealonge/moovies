@@ -12,6 +12,12 @@
   bottom: auto;
   z-index: 3;
 
+  &.--other-pages {
+    background-color: $white;
+    padding: 1.4rem 7.7rem 1.4rem 7.7rem;
+    position: static;
+  }
+
   &__logo {
     width: 13rem;
     height: 7.3rem;
@@ -23,6 +29,10 @@
 
     &.--red {
       background-image: url('@/assets/images/logo-all-white.svg');
+    }
+
+    &.--other-pages {
+      background-image: url('@/assets/images/logo-black.svg');
     }
   }
 
@@ -90,6 +100,10 @@
       @extend %nav;
       color: $white;
       margin: 0 3rem;
+
+      &.--other-pages {
+        color: $black;
+      }
     }
   }
 
