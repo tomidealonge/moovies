@@ -1,7 +1,17 @@
 <template>
   <div class="c-movie">
-    <div class="c-movie-preview">
-      <div class="c-movie-preview-icon">
+    <div
+      @mouseenter="hoverPreview($event)"
+      @mouseleave="previewHoverOut($event)"
+      class="c-movie-preview"
+    >
+      <div class="c-movie-preview__gif">
+        <img
+          :src="require(`@/assets/gifs/${movie.gif}.gif`)"
+          :alt="movie.title"
+        />
+      </div>
+      <div @click="openCinema" class="c-movie-preview-icon">
         <div class="c-movie-preview-icon__inner"></div>
       </div>
       <div class="c-movie-tweet-icon">
@@ -28,12 +38,35 @@ export default {
       type: Object,
       default: () => {
         return {
+          gif: "blacklist",
           title: "The Blacklist",
           description:
             "I Had Bullets, He Had Words. But When He Was Done Talking For The First Time I Truly Understood Which Of Those Was More Powerful.",
-          author: "Raymond Reddington"
+          author: "Raymond Reddington",
+          video: "https://www.youtube.com/watch?v=rDuetklFtDQ"
         };
       }
+    }
+  },
+
+  data() {
+    return {
+      cinemaOpen: false,
+      words: ["Tomide", "Joshua", "The Irishman", "Spiderman", "Khal Drogo"]
+    };
+  },
+
+  methods: {
+    hoverPreview(e) {
+      e.target.classList.add("--hover");
+    },
+
+    previewHoverOut(e) {
+      e.target.classList.remove("--hover");
+    },
+
+    openCinema() {
+      this.$emit("openCinema");
     }
   }
 };

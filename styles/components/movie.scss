@@ -8,7 +8,7 @@
   position: relative;
   z-index: 2;
 
-  &:nth-child(2n) {
+  &:nth-child(odd) {
     .c-movie-preview {
       order: 2;
       transform: rotate(2deg);
@@ -32,12 +32,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all ease-in-out 500ms;
+
+    &__gif {
+      position: absolute;
+      border-radius: 2.5rem;
+      inset: 0;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
 
     &__cover {
       position: absolute;
       border-radius: 2.5rem;
       inset: 0;
+      opacity: 1;
+      bottom: auto;
+      height: 100%;
       background-color: rgba($color: $black, $alpha: 0.5);
+      z-index: 2;
+      transition: all ease-in-out 500ms;
     }
 
     .c-movie-preview-icon {
@@ -49,6 +68,7 @@
       border-radius: 50%;
       background-color: rgba($color: $black, $alpha: 0.5);
       cursor: pointer;
+      z-index: 1;
 
       &__inner {
         width: 4.1rem;
@@ -75,6 +95,7 @@
       left: 0;
       top: 50%;
       transform: translate(-50%, -50%);
+      z-index: 1;
 
 
       &__inner {
@@ -89,6 +110,22 @@
       }
     }
 
+    &.--hover {
+      .c-movie-preview__cover {
+        height: 0%;
+        opacity: 0;
+      }
+    }
+
+    &.--open {
+      z-index: 20;
+      transform: scale(1.5);
+    }
+
+  }
+
+  &.--open {
+    z-index: 20;
   }
 
   .c-movie-text-block {
