@@ -79,6 +79,10 @@
       background-color: rgba($color: $black, $alpha: 0.5);
       z-index: 2;
       transition: all ease-in-out 500ms;
+
+      @include media("<=tablet") {
+        display: none;
+      }
     }
 
     .c-movie-preview-icon {

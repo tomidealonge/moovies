@@ -94,7 +94,8 @@ export default {
         breakpoints: {
           768: {
             padding: "10%",
-            gap: "20px"
+            gap: "0px",
+            fixedWidth: "100%"
           }
         }
       },

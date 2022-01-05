@@ -10,13 +10,35 @@
     padding: 40px 25px 40px 25px;
   }
 
+  .c-location {
+    &.--desktop {
+      display: block;
+
+      @include media("<=tablet") {
+        display: none;
+      }
+    }
+
+    &.--mobile {
+      display: none;
+
+      @include media("<=tablet") {
+        display: block;
+        margin-top: 30px
+      }
+    }
+
+    @extend %body-14;
+    line-height: 1.2;
+  }
+
 
   .c-end-note {
     width: 100%;
     max-width: 32.3rem;
 
     @include media("<=tablet") {
-      margin-bottom: 20px;
+      margin-bottom: 60px;
       max-width: unset;
     }
 
@@ -25,9 +47,7 @@
       margin-bottom: 0.7rem;
     }
 
-    &__sub-text {
-      @extend %body-14;
-    }
+
   }
 
   .c-cred {

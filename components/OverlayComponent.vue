@@ -9,15 +9,12 @@ export default {
   data() {
     return {
       bodyWords: [
-        "Tomide",
-        "Joshua",
+        "Major J Gatsby",
+        "The Green Goblin",
+        "The Sopranos",
         "The Irishman",
-        "Wakanda",
-        "Khal Drogo",
-        "Last Kingdom",
-        "Superman",
-        "End Game",
-        "Spiderman"
+        "Spiderman",
+        "Khal Drogo"
       ]
     };
   }

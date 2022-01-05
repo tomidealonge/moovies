@@ -6,7 +6,7 @@
   >
     <marquee-text
       :repeat="5"
-      :duration="20"
+      :duration="50"
       :reverse="index % 2 === 0 ? true : false"
       v-for="(words, index) in words"
       :key="index"

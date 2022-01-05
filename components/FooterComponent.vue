@@ -4,7 +4,9 @@
       <div class="c-end-note__heading">
         You've gotten to the end of this experience.
       </div>
-      <div class="c-end-note__sub-text">Made with ❤️ from Lagos, Nigeria</div>
+      <div class="c-location --desktop">
+        Made with ❤️ from Lagos, Nigeria
+      </div>
     </div>
     <div class="c-cred">
       <div class="c-cred__heading">
@@ -66,6 +68,9 @@
             class="creators__social-link tomide --github"
           ></a>
         </div>
+      </div>
+      <div class="c-location --mobile">
+        Made with ❤️ from Lagos, Nigeria
       </div>
     </div>
   </div>

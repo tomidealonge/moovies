@@ -66,23 +66,34 @@
 
           &.--got {
             transform: rotate(2deg);
+
+            @include media("<=tablet") {
+              transform: rotate(0deg);
+            }
           }
 
           &.--power {
             transform: rotate(-2deg);
+
+            @include media("<=tablet") {
+              transform: rotate(0deg);
+            }
           }
 
           &.--blacklist {
             transform: rotate(4deg);
+
+            @include media("<=tablet") {
+              transform: rotate(0deg);
+            }
           }
 
           &.--peaky-blinders {
             transform: rotate(-4deg);
-          }
 
-          &.is-active {
-            border: 10px solid red;
-            transform: scale(1.2) !important;
+            @include media("<=tablet") {
+              transform: rotate(0deg);
+            }
           }
         }
 
@@ -114,7 +125,7 @@
 
     @include media("<=tablet") {
       padding-top: 70px;
-      padding-bottom: 70px;
+      padding-bottom: 20px;
     }
   }
 }

@@ -48,7 +48,13 @@ export default {
 
   data() {
     return {
-      words: ["Tomide", "Joshua", "The Irishman", "Spiderman", "Khal Drogo"]
+      words: [
+        "The Green Goblin",
+        "The Sopranos",
+        "The Irishman",
+        "Spiderman",
+        "Khal Drogo"
+      ]
     };
   },
 
