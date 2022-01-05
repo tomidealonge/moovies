@@ -8,16 +8,30 @@
   position: relative;
   z-index: 2;
 
+  @include media("<=tablet") {
+    flex-direction: column;
+  }
+
   &:nth-child(odd) {
     .c-movie-preview {
       order: 2;
       transform: rotate(2deg);
       margin-right: 0rem;
+
+      @include media("<=tablet") {
+        order: 1;
+      }
+
     }
 
     .c-movie-text-block {
       order: 1;
       margin-right: 6.3rem;
+
+      @include media("<=tablet") {
+        order: 2;
+        margin-right: 0;
+      }
     }
   }
 
@@ -33,6 +47,14 @@
     justify-content: center;
     align-items: center;
     transition: all ease-in-out 500ms;
+
+    @include media("<=tablet") {
+      width: 90%;
+      margin-right: 0;
+      max-width: 400px;
+      height: 300px;
+      margin-bottom: 30px;
+    }
 
     &__gif {
       position: absolute;
@@ -131,6 +153,10 @@
   .c-movie-text-block {
     width: 100%;
     max-width: 40.4rem;
+
+    @include media("<=tablet") {
+      width: 80%;
+    }
 
     &__title {
       @extend %title-75;

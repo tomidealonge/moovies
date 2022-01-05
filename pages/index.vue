@@ -90,7 +90,13 @@ export default {
         throttle: 500,
         updateOnMove: true,
         arrows: false,
-        pagination: false
+        pagination: false,
+        breakpoints: {
+          768: {
+            padding: "10%",
+            gap: "20px"
+          }
+        }
       },
       toggleState: "--black",
       movie: [
@@ -134,17 +140,32 @@ export default {
         "Tomide",
         "Joshua",
         "The Irishman",
-        "Spiderman",
-        "Khal Drogo"
+        "Wakanda",
+        "Khal Drogo",
+        "Last Kingdom",
+        "Superman",
+        "End Game",
+        "Spiderman"
       ],
       bodyWords: [
         "Game of Thrones",
         "Peaky Blinders",
         "The Good Doctor",
         "The Boondocks",
-        "The Dark Knight Rises"
+        "The Dark Knight Rises",
+        "Last Kingdom",
+        "Wakanda",
+        "Superman",
+        "End Game",
+        "Spiderman"
       ]
     };
+  },
+
+  computed: {
+    mediaQuery() {
+      return window.matchMedia("(max-width: 600px)").matches;
+    }
   },
 
   methods: {

@@ -1,0 +1,11 @@
+.c-overlay {
+  overflow: hidden;
+  position: relative;
+  background-color: $black;
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  bottom: auto;
+  height: 0%;
+  opacity: 0;
+}

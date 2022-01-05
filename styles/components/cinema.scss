@@ -84,6 +84,10 @@
     transform: translate(11rem, -50%);
     z-index: 2;
 
+    @include media("<=tablet") {
+      transform: translate(11%, -50%);
+    }
+
 
     &__inner {
       width: 5rem;

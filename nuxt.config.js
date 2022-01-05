@@ -27,13 +27,50 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{src: '@/plugins/components', mode: 'client'}],
 
-  pageTransition: 'transition-page',
+  // pageTransition: 'transition-page',
+
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    css: false,
+
+    enter(el, done) {
+        this.$gsap.timeline({
+          onComplete: done
+        })
+      .to('.c-overlay', {
+        opacity: 1,
+        height: '100%',
+        duration: 0.9,
+        ease: 'back',
+      })
+      .to('.c-overlay', {
+        opacity: 0,
+        height: '0%',
+        duration: 0.9,
+        ease: 'power2.inOut'
+      })
+      
+    },
+    leave(el, done) {
+        this.$gsap.timeline({
+          onComplete: done
+        })
+      .to('.c-overlay', {
+        opacity: 0,
+        height: '0%',
+        duration: 0.9,
+        ease: 'power2.inOut'
+      })
+      
+    }
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['nuxt-gsap-module'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

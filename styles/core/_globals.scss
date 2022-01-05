@@ -66,6 +66,10 @@ video {
   display: none !important;
 }
 
+.nuxt-link-exact-active {
+  color: $red;
+}
+
 
 // Page transition
 .transition-page-enter-active,

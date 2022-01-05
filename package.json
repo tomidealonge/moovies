@@ -14,6 +14,7 @@
     "@splidejs/vue-splide": "0.3.5",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
+    "nuxt-gsap-module": "^1.6.0",
     "vue-marquee-text-component": "1.2.0",
     "vue-social-sharing": "^3.0.8"
   },
