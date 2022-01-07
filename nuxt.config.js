@@ -14,13 +14,13 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-            {
+       {
         hid: 'description',
         name: 'description',
         content:
           'Our main aim is bringing back the best scenes from your favorite movies, series & TV shows, you know, that nostalgic feeling'
       },
-            {
+       {
         name: 'apple-mobile-web-app-title',
         property: 'apple-mobile-web-app-title',
         content:
@@ -41,8 +41,7 @@ export default {
       {
         name: 'og:image',
         property: 'og:image',
-        content:
-          process.env.SITE_URL + '/webclip'
+        content:'/webclip.jpg'
       },
       {
         name: 'twitter:title',
@@ -64,8 +63,7 @@ export default {
       },
       {
         name: 'twitter:image',
-        content:
-          process.env.SITE_URL + '/webclip'
+        content:'/webclip.jpg'
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.jpg" }],
