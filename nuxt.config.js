@@ -7,15 +7,66 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Moovies",
+    title: "Moovies | Bringing back the best scenes from your favorite movies, series & TV shows",
     htmlAttrs: {
       lang: "en"
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" }
+            {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Our main aim is bringing back the best scenes from your favorite movies, series & TV shows, you know, that nostalgic feeling'
+      },
+            {
+        name: 'apple-mobile-web-app-title',
+        property: 'apple-mobile-web-app-title',
+        content:
+          'Moovies | Bringing back the best scenes from your favorite movies, series & TV shows'
+      },
+      {
+        name: 'og:title',
+        property: 'og:title',
+        content:
+          'Moovies | Bringing back the best scenes from your favorite movies, series & TV shows'
+      },
+      {
+        name: 'og:site_name',
+        property: 'og:site_name',
+        content:
+          'Moovies | Bringing back the best scenes from your favorite movies, series & TV shows'
+      },
+      {
+        name: 'og:image',
+        property: 'og:image',
+        content:
+          process.env.SITE_URL + '/webclip'
+      },
+      {
+        name: 'twitter:title',
+        property: 'og:title',
+        content:
+          'Moovies | Bringing back the best scenes from your favorite movies, series & TV shows'
+      },
+      {
+        name: 'twitter:site_name',
+        property: 'og:site_name',
+        content:
+          'Moovies | Bringing back the best scenes from your favorite movies, series & TV shows'
+      },
+      {
+        name: 'twitter:description',
+        property: 'twitter:description',
+        content:
+          'Our main aim is bringing back the best scenes from your favorite movies, series & TV shows, you know, that nostalgic feeling'
+      },
+      {
+        name: 'twitter:image',
+        content:
+          process.env.SITE_URL + '/webclip'
+      }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.jpg" }],
 
@@ -41,13 +92,13 @@ export default {
       .to('.c-overlay', {
         opacity: 1,
         height: '100%',
-        duration: 0.9,
+        duration: 0.5,
         ease: 'back',
       })
       .to('.c-overlay', {
         opacity: 0,
         height: '0%',
-        duration: 0.9,
+        duration: 0.5,
         ease: 'power2.inOut'
       })
       
@@ -59,7 +110,7 @@ export default {
       .to('.c-overlay', {
         opacity: 0,
         height: '0%',
-        duration: 0.9,
+        duration: 0.5,
         ease: 'power2.inOut'
       })
       
