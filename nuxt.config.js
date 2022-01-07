@@ -83,36 +83,35 @@ export default {
     mode: 'out-in',
     css: false,
 
-    enter(el, done) {
-        this.$gsap.timeline({
-          onComplete: done
-        })
+    beforeEnter(el, done) {
+      this.$gsap.timeline({
+        onComplete: done
+      })
       .to('.c-overlay', {
         opacity: 1,
         height: '100%',
-        duration: 0.5,
+        duration: 1,
         ease: 'back',
       })
       .to('.c-overlay', {
         opacity: 0,
         height: '0%',
-        duration: 0.5,
+        duration: 1,
         ease: 'power2.inOut'
       })
       
     },
-    leave(el, done) {
-        this.$gsap.timeline({
-          onComplete: done
-        })
-      .to('.c-overlay', {
-        opacity: 0,
-        height: '0%',
-        duration: 0.5,
-        ease: 'power2.inOut'
-      })
-      
-    }
+    // leave(el, done) {
+    //     this.$gsap.timeline({
+    //       onComplete: done
+    //     })
+    //   .to('.c-overlay', {
+    //     opacity: 0,
+    //     height: '0%',
+    //     duration: 0.6,
+    //     ease: 'power2.inOut'
+    //   })
+    // }
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
