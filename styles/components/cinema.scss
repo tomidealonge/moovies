@@ -12,6 +12,22 @@
   justify-content: center;
   align-items: center;
 
+  &__logo {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background-image: url('@/assets/images/moovies-icon-white.svg');
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3rem;
+    right: auto;
+    bottom: auto;
+    left: 3rem;
+    cursor: pointer;
+  }
+
   &__close {
     width: 4rem;
     aspect-ratio: 1/1;
@@ -39,7 +55,7 @@
 
   &__video {
     width: 100%;
-    max-width: 80.4vw;
+    max-width: 55.4vw;
     height: 50.9rem;
     border-radius: 2.5rem;
     position: relative;
@@ -51,6 +67,10 @@
     overflow: hidden;
     border: 1px solid $white;
     transition: all ease-in-out 500ms;
+
+    @include media("<=tablet") {
+      max-width: 80vw;
+    }
 
     &.--open {
       transition: all ease-in-out 500ms;
@@ -81,7 +101,7 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translate(11rem, -50%);
+    transform: translate(20vw, -50%);
     z-index: 2;
 
     @include media("<=tablet") {

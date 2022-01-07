@@ -2,6 +2,7 @@
   <div class="c-cinema" :class="openCinema ? '--open' : ''">
     <WordsComponent headerColor="black" position="header" :words="words" />
     <div @click="closeCinema" class="c-cinema__close"></div>
+    <div @click="closeCinema" class="c-cinema__logo"></div>
     <ShareNetwork
       class="c-cinema-tweet-icon"
       network="twitter"
@@ -10,8 +11,8 @@
     >
       <div class="c-cinema-tweet-icon__inner"></div>
     </ShareNetwork>
-    <div ref="video" class="c-cinema__video">
-      <iframe :src="video"></iframe>
+    <div @click.stop="" ref="video" class="c-cinema__video">
+      <iframe v-if="openCinema" :src="video"></iframe>
     </div>
   </div>
 </template>
