@@ -7,7 +7,7 @@
       class="c-cinema-tweet-icon"
       network="twitter"
       :title="`I just saw this scene of ${title} from moovies, check it out`"
-      url="https://testlink.com"
+      url="https://moovies-hub.netlify.app"
     >
       <div class="c-cinema-tweet-icon__inner"></div>
     </ShareNetwork>
