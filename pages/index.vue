@@ -1,6 +1,6 @@
 <template>
   <div class="c-home">
-    <CinemaComponent :openCinema="openCinema" :video="chosenVideo" @toggleCinema="toggleCinema" />
+    <CinemaComponent :openCinema="openCinema" :title="chosenVideoTitle" :video="chosenVideo" @toggleCinema="toggleCinema" />
     <NavComponent @changeToggle="toggleMode" />
     <header class="c-header">
       <WordsComponent
@@ -95,6 +95,7 @@ export default {
           }
         }
       },
+      chosenVideoTitle: '',
       toggleState: "--black",
       movies: [
         {
@@ -118,7 +119,7 @@ export default {
           title: "Game of Thrones",
           video:"https://www.youtube.com/embed/TCcDm2fGKXI",
           description:
-            "A day will come when you think you are safe and happy, and your joy will turn to ashes in your mouth. And you will know the debt is paid.",
+            "I will not give my life for Joffery's murder and I know I'll get no justice here, so I will let the gods decide my fate. I demand a trial by combat.",
           author: "Tyrone Lannister"
         },
         {
@@ -180,7 +181,7 @@ export default {
         {
           gif: "originals",
           title: "The originals",
-          video:'https://www.youtube.com/embed/8BDsO3jM8K0',
+          video:'https://www.youtube.com/embed/UQkVPBOPb-U',
           description:
             "Lets end the charade shall we, Vampires of New Orleans, do recall that I am an original. A hybrid. I cannot be killed. Eternity is an awfully long time. How long you think Marcel will stay in power? What if, one of you lot, were to release me knowing that I would be eternally in your debt.",
           author: "Klaus"
@@ -223,6 +224,7 @@ export default {
     toggleCinema(movie = {}) {
       this.openCinema = !this.openCinema;
       this.chosenVideo = movie?.video
+      this.chosenVideoTitle = movie?.title
     },
     toggleMode(mode) {
       mode ? (this.toggleState = "--red") : (this.toggleState = "--black");
