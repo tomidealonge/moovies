@@ -165,7 +165,7 @@ export default {
         {
           gif: "vikings",
           title: "Vikings",
-          video:'https://www.youtube.com/embed/pGm72WAsFfE',
+          video:'https://www.youtube.com/embed/S5PzNLdC_EM',
           description:
             "What kind of King abandons his people? What kind of father abandons his sons? So... WHO wants to be King? Don’t you know how this works? If you want to be King, you must kill me.",
           author: "Ragnar"
