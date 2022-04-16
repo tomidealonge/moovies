@@ -14,8 +14,8 @@
           future, since pub trivia will come back soon, and you're going to need
           to brush up. Although Netflix’s offering of classics is small in
           number, it is mighty in cultural significance. Our main aim is
-          bringing bringing back to you the best scenes from your favorite
-          movies, series & TV shows, you know, that nostalgic feeling.
+          bringing back to you the best scenes from your favorite movies, series
+          & TV shows, you know, that nostalgic feeling.
         </div>
       </div>
     </main>

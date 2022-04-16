@@ -1,6 +1,11 @@
 <template>
   <div class="c-home">
-    <CinemaComponent :openCinema="openCinema" :title="chosenVideoTitle" :video="chosenVideo" @toggleCinema="toggleCinema" />
+    <CinemaComponent
+      :openCinema="openCinema"
+      :title="chosenVideoTitle"
+      :video="chosenVideo"
+      @toggleCinema="toggleCinema"
+    />
     <NavComponent @changeToggle="toggleMode" />
     <header class="c-header">
       <WordsComponent
@@ -63,7 +68,12 @@
     </header>
     <main class="c-main">
       <WordsComponent @openCinema="toggleCinema" :words="bodyWords" />
-      <MovieComponent v-for="movie in movies" :key="movie.title" @openCinema="toggleCinema(movie)" :movie="movie" />
+      <MovieComponent
+        v-for="movie in movies"
+        :key="movie.title"
+        @openCinema="toggleCinema(movie)"
+        :movie="movie"
+      />
     </main>
 
     <FooterComponent />
@@ -95,12 +105,12 @@ export default {
           }
         }
       },
-      chosenVideoTitle: '',
+      chosenVideoTitle: "",
       toggleState: "--black",
       movies: [
         {
           gif: "django",
-          video: 'https://www.youtube.com/embed/B9tF3KgEdAI',
+          video: "https://www.youtube.com/embed/B9tF3KgEdAI",
           title: "Django",
           description:
             "[pulls out a second revolver] I count two guns, n*gger.",
@@ -108,7 +118,7 @@ export default {
         },
         {
           gif: "bane",
-          video: 'https://www.youtube.com/embed/rDuetklFtDQ',
+          video: "https://www.youtube.com/embed/rDuetklFtDQ",
           title: "Dark Knight Rises",
           description:
             "Oh, you think darkness is your ally. But you merely adopted the dark; I was born in it, molded by it. I didn't see the light until I was already a man, by then it was nothing to me but blinding! The shadows betray you because they belong to me.",
@@ -117,39 +127,36 @@ export default {
         {
           gif: "got",
           title: "Game of Thrones",
-          video:"https://www.youtube.com/embed/TCcDm2fGKXI",
+          video: "https://www.youtube.com/embed/TCcDm2fGKXI",
           description:
             "I will not give my life for Joffery's murder and I know I'll get no justice here, so I will let the gods decide my fate. I demand a trial by combat.",
           author: "Tyrone Lannister"
         },
         {
           gif: "scarface",
-          video: 'https://www.youtube.com/embed/a_z4IuxAqpE',
+          video: "https://www.youtube.com/embed/a_z4IuxAqpE",
           title: "Scarface",
-          description:
-            "Say hello to my little friend",
+          description: "Say hello to my little friend",
           author: "Tony Montana"
         },
         {
           gif: "godfather",
           title: "The Godfather",
-          video:'https://www.youtube.com/embed/fmX2VzsB25s',
-          description:
-            "I'm gonna make him an offer he can't refuse",
+          video: "https://www.youtube.com/embed/fmX2VzsB25s",
+          description: "I'm gonna make him an offer he can't refuse",
           author: "Don Vito Corleone"
         },
         {
           gif: "titanic",
           title: "The Titanic",
-          video:'https://www.youtube.com/embed/9KQm_7Lpt5E',
-          description:
-            "I'm flying, Jack",
+          video: "https://www.youtube.com/embed/9KQm_7Lpt5E",
+          description: "I'm flying, Jack",
           author: "Rose"
         },
         {
           gif: "notebook",
           title: "The Notebook",
-          video:'https://www.youtube.com/embed/E1I0hAxGFXw',
+          video: "https://www.youtube.com/embed/E1I0hAxGFXw",
           description:
             "So it's not gonna be easy. It's gonna be really hard. We're gonna have to work at this every day, but I want to do that because I want you. I want all of you, for ever, you and me, every day.",
           author: "Noah"
@@ -157,15 +164,14 @@ export default {
         {
           gif: "endgame",
           title: "Avengers: Endgame",
-          video:'https://www.youtube.com/embed/TWB31WFomz4',
-          description:
-            "And I am Iron Man",
+          video: "https://www.youtube.com/embed/TWB31WFomz4",
+          description: "And I am Iron Man",
           author: "Tony"
         },
         {
           gif: "vikings",
           title: "Vikings",
-          video:'https://www.youtube.com/embed/S5PzNLdC_EM',
+          video: "https://www.youtube.com/embed/S5PzNLdC_EM",
           description:
             "What kind of King abandons his people? What kind of father abandons his sons? So... WHO wants to be King? Don’t you know how this works? If you want to be King, you must kill me.",
           author: "Ragnar"
@@ -173,19 +179,33 @@ export default {
         {
           gif: "hsm",
           title: "High School Musical",
-          video:'https://www.youtube.com/embed/4cO5tkkUSB8',
-          description:
-            "No, Here's to Right now",
+          video: "https://www.youtube.com/embed/4cO5tkkUSB8",
+          description: "No, Here's to Right now",
           author: "Troy"
         },
         {
           gif: "originals",
           title: "The originals",
-          video:'https://www.youtube.com/embed/UQkVPBOPb-U',
+          video: "https://www.youtube.com/embed/UQkVPBOPb-U",
           description:
             "Lets end the charade shall we, Vampires of New Orleans, do recall that I am an original. A hybrid. I cannot be killed. Eternity is an awfully long time. How long you think Marcel will stay in power? What if, one of you lot, were to release me knowing that I would be eternally in your debt.",
           author: "Klaus"
         },
+        {
+          gif: "troy",
+          title: "Troy",
+          video: "https://www.youtube.com/embed/7UTb7VKTCcw",
+          description:
+            "You gave him the honor of your sword. You won't have eyes tonight, you won't have ears or a tongue. You will wander the underworld blind, deaf, and dumb, and all the dead will know - this is Hector, the fool who thought he killed Achilles",
+          author: "Achilles"
+        },
+        {
+          gif: "sparta",
+          title: "300",
+          video: "https://www.youtube.com/embed/4Prc1UfuokY",
+          description: "Madness... This is SPARTA",
+          author: "Leonidas"
+        }
       ],
       headerWords: [
         "Tomide",
@@ -210,7 +230,7 @@ export default {
         "End Game",
         "Spiderman"
       ],
-      chosenVideo: ''
+      chosenVideo: ""
     };
   },
 
@@ -223,8 +243,8 @@ export default {
   methods: {
     toggleCinema(movie = {}) {
       this.openCinema = !this.openCinema;
-      this.chosenVideo = movie?.video
-      this.chosenVideoTitle = movie?.title
+      this.chosenVideo = movie?.video;
+      this.chosenVideoTitle = movie?.title;
     },
     toggleMode(mode) {
       mode ? (this.toggleState = "--red") : (this.toggleState = "--black");
