@@ -234,6 +234,10 @@ export default {
     };
   },
 
+  mounted() {
+    this.shuffleMoovies();
+  },
+
   computed: {
     mediaQuery() {
       return window.matchMedia("(max-width: 600px)").matches;
@@ -241,6 +245,21 @@ export default {
   },
 
   methods: {
+    shuffleMoovies() {
+      this.movies = this.getShuffledArr(this.movies);
+    },
+
+    getShuffledArr(arr) {
+      if (arr.length === 1) {
+        return arr;
+      }
+      const rand = Math.floor(Math.random() * arr.length);
+      return [
+        arr[rand],
+        ...this.getShuffledArr(arr.filter((_, i) => i !== rand))
+      ];
+    },
+
     toggleCinema(movie = {}) {
       this.openCinema = !this.openCinema;
       this.chosenVideo = movie?.video;
